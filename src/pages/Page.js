@@ -1,3 +1,9 @@
+import * as THREE from 'three'
+import { useThree, useLoader } from '@react-three/fiber'
+import { Box } from '@react-three/flex'
+import HeightReporter from '../helper/HeightReporter'
+import Text from '../components/Text'
+
 export default function Page({ text, tag, images, textScaleFactor, onReflow, left = false }) {
   const textures = useLoader(THREE.TextureLoader, images)
   const { viewport } = useThree()
