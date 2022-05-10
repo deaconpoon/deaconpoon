@@ -5,12 +5,11 @@ const state = {
   mouse: [0, 0],
   content: [
     {
-      tag: '00',
-      text: `The Bacchic\nand Dionysiac\nRites`,
-      images: ['/images/BH41NVu.jpg', '/images/fBoIJLX.jpg', '/images/04zTfWB.jpg'],
+      tag: 'welcome',
+      text: `Human`,
     },
-    { tag: '01', text: `The Elysian\nMysteries`, images: ['/images/c4cA8UN.jpg', '/images/ajQ73ol.jpg', '/images/gZOmLNU.jpg'] },
-    { tag: '02', text: `The Hiramic\nLegend`, images: ['/images/mbFIW1b.jpg', '/images/mlDUVig.jpg', '/images/gwuZrgo.jpg'] },
+    { tag: 'my name is', text: `Deacon\nPoon` },
+    { tag: 'i am a', text: `Design\nEngineer` },
   ],
   depthbox: [
     {
@@ -28,9 +27,23 @@ const state = {
     },
   ],
   lines: [
-    { points: [[-20, 0, 0], [-9, 0, 0]], color: "black", lineWidth: 0.5 },
-    { points: [[20, 0, 0], [9, 0, 0]], color: "black", lineWidth: 0.5 },
-  ]
+    {
+      points: [
+        [-20, 0, 0],
+        [-9, 0, 0],
+      ],
+      color: 'black',
+      lineWidth: 0.5,
+    },
+    {
+      points: [
+        [20, 0, 0],
+        [9, 0, 0],
+      ],
+      color: 'black',
+      lineWidth: 0.5,
+    },
+  ],
 }
 
 export default state
