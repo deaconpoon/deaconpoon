@@ -1,18 +1,13 @@
 import * as THREE from 'three'
-import React, { Suspense, useEffect, useRef, useState, useCallback, useLayoutEffect } from 'react'
+import React, { Suspense, useEffect, useRef, useState, useCallback } from 'react'
 import { Canvas, useThree, useFrame, useLoader } from '@react-three/fiber'
-import { Flex, Box, useFlexSize } from '@react-three/flex'
+import { Flex, Box } from '@react-three/flex'
 import { Loader, Line, useAspect } from '@react-three/drei'
+import HeightReporter from './helper/HeightReporter'
 import Effects from './components/Effects'
 import Text from './components/Text'
 import Geo from './components/Geo'
 import state from './state'
-
-function HeightReporter({ onReflow }) {
-  const size = useFlexSize()
-  useLayoutEffect(() => onReflow && onReflow(...size), [onReflow, size])
-  return null
-}
 
 function Page({ text, tag, images, textScaleFactor, onReflow, left = false }) {
   const textures = useLoader(THREE.TextureLoader, images)
