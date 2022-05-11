@@ -2,7 +2,6 @@ import * as THREE from 'three'
 import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { useGLTF, MeshDistortMaterial, Shadow } from '@react-three/drei'
-import Text from './Text'
 import state from '../state'
 
 export default function Model(props) {
@@ -28,15 +27,6 @@ export default function Model(props) {
           <meshBasicMaterial wireframe />
         </mesh>
       </group>
-      {/*  <group position={[1.25, -0.5, 0]}>
-        <Text position={[0, 0, 0]} fontSize={0.07} lineHeight={1} letterSpacing={-0.05}>
-          03
-          <meshBasicMaterial color="#cccccc" toneMapped={false} />
-        </Text>
-        <Text bold position={[-0.01, -0.1, 0]} fontSize={0.1} lineHeight={1} letterSpacing={-0.05} color="black">
-          {`Poimandres,\nThe vision of Hermes`}
-        </Text>
-      </group> */}
       <Shadow ref={shadow} opacity={0} rotation-x={-Math.PI / 2} position={[0, -1.51, 0]} />
     </group>
   )
