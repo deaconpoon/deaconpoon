@@ -1,5 +1,5 @@
 import Geo from './components/Geo'
-
+import Sphere from './components/Sphere'
 const state = {
   top: 0,
   pages: 0,
@@ -11,7 +11,7 @@ const state = {
       text: `Human`,
     },
     { tag: 'my name is', text: `Deacon\nPoon`, shape: <Geo scale={8} position={[10, -8, -5]} /> },
-    { tag: 'i am a', text: `Design\nEngineer` },
+    { tag: 'i am a', text: `Design\nEngineer`, shape: <Sphere /> },
   ],
   depthbox: [
     {
