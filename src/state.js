@@ -1,3 +1,5 @@
+import Geo from './components/Geo'
+
 const state = {
   top: 0,
   pages: 0,
@@ -8,7 +10,7 @@ const state = {
       tag: 'welcome',
       text: `Human`,
     },
-    { tag: 'my name is', text: `Deacon\nPoon` },
+    { tag: 'my name is', text: `Deacon\nPoon`, shape: <Geo scale={8} position={[10, -8, -5]} /> },
     { tag: 'i am a', text: `Design\nEngineer` },
   ],
   depthbox: [
