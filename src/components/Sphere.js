@@ -26,7 +26,7 @@ export default function Sphere() {
       <MeshDistortMaterial
         attach="material"
         envMap={cubeCamera.renderTarget.texture}
-        color="black
+        color="white
     "
         roughness={0.1}
         metalness={1}

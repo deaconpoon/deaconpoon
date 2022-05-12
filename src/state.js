@@ -18,14 +18,14 @@ const state = {
       depth: 0,
       color: '#cccccc',
       textColor: '#ffffff',
-      text: 'In a void,\nno one could say\nwhy a thing\nonce set in motion\nshould stop anywhere.',
-      image: '/images/cAKwexj.jpg',
+      text: 'In a sauce,\nno one could say\nwhy a thing\nonce set in motion\nshould stop anywhere.',
+      image: '/images/void.jpg',
     },
     {
       depth: -5,
       textColor: '#272727',
-      text: 'For why should it stop\nhere rather than here?\nSo that a thing\nwill either be at rest\nor must be moved\nad infinitum.',
-      image: '/images/04zTfWB.jpg',
+      text: 'Do you like me?',
+      image: '/images/void.jpg',
     },
   ],
   lines: [
