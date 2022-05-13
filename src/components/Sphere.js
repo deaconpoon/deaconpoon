@@ -24,16 +24,17 @@ export default function Sphere() {
     <mesh visible position={[bW * 1.2, -bH, 0]} rotation={[0, 0, 0]} castShadow>
       <sphereGeometry attach="geometry" args={[5, 400, 100]} />
       <MeshDistortMaterial
-        attach="material"
+        /*  attach="material" */
         envMap={cubeCamera.renderTarget.texture}
-        color="white
+        color="grey
     "
+        clearcoat={1}
+        clearcoatRoughness={0}
         roughness={0.1}
-        metalness={1}
+        metalness={0.1}
         factor={1}
         speed={10}
       />
-      <directionalLight intensity={1} />
     </mesh>
   )
 }

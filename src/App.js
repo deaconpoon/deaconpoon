@@ -11,6 +11,7 @@ export default function App() {
   const onScroll = (e) => (state.top = e.target.scrollTop)
   useEffect(() => void onScroll({ target: scrollArea.current }), [])
   const [pages, setPages] = useState(0)
+
   return (
     <>
       <Canvas

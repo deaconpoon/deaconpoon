@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import { useThree, useFrame } from '@react-three/fiber'
 import state from '../state'
 import Text from '../components/Text'
+import Logo from '../components/Logo'
 
 export default function Layercard({ depth, boxWidth, boxHeight, text, textColor, color, map, textScaleFactor }) {
   const ref = useRef()

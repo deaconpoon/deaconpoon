@@ -1,5 +1,7 @@
 import Geo from './components/Geo'
 import Sphere from './components/Sphere'
+import Logo from './components/Logo'
+
 const state = {
   top: 0,
   pages: 0,

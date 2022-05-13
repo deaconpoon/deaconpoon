@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import { useRef, useCallback } from 'react'
+import { useRef, useCallback, useState, useEffect } from 'react'
 import { useThree, useFrame, useLoader } from '@react-three/fiber'
 import { Flex, Box } from '@react-three/flex'
 import { Line, useAspect } from '@react-three/drei'
@@ -8,6 +8,8 @@ import Text from '../components/Text'
 import Geo from '../components/Geo'
 import Page from '../pages/Page'
 import Layercard from '../pages/Layercard'
+import FinalPage from '../pages/FinalPage'
+import Logo from '../components/Logo'
 
 export default function Content({ onReflow }) {
   const group = useRef()
@@ -25,8 +27,12 @@ export default function Content({ onReflow }) {
   const handleReflow = useCallback((w, h) => onReflow((state.pages = h / viewport.height + 5.5)), [onReflow, viewport.height])
   const sizesRef = useRef([])
   const scale = Math.min(1, viewport.width / 16)
+
   return (
     <group ref={group}>
+      <Box dir="row" width="100%" height="100%" align="center" justify="center" centerAnchor>
+        <Logo scale={scale} position={[-bW / 1.3, -bH / 10, -5]} />
+      </Box>
       <Flex dir="column" position={[-viewport.width / 2, viewport.height / 2, 0]} size={[viewport.width, viewport.height, 0]} onReflow={handleReflow}>
         {state.content.map((props, index) => (
           <Page
@@ -62,7 +68,8 @@ export default function Content({ onReflow }) {
         <Box dir="row" width="100%" height="100%" align="center" justify="center">
           <Box>
             <Layercard {...state.depthbox[0]} text={state.depthbox[1].text} boxWidth={bW} boxHeight={bH} map={texture} textScaleFactor={scale} />
-            <Geo position={[bW / 2, -bH / 2, state.depthbox[1].depth]} />
+            {/* <Geo position={[bW / 2, -bH / 2, state.depthbox[1].depth]} /> */}
+            <FinalPage planeArgs={[bW, bH]} position={[bW / 2, -bH / 2, state.depthbox[1].depth]} />
           </Box>
         </Box>
       </Flex>

@@ -1,10 +1,9 @@
-import * as THREE from 'three'
 import { useThree } from '@react-three/fiber'
 import { Box } from '@react-three/flex'
 import { useAspect } from '@react-three/drei'
 import HeightReporter from '../helper/HeightReporter'
 import Text from '../components/Text'
-import Geo from '../components/Geo'
+import Logo from '../components/Logo'
 
 export default function Page({ text, tag, textScaleFactor, onReflow, left = false, shape }) {
   const { viewport } = useThree()
@@ -13,6 +12,7 @@ export default function Page({ text, tag, textScaleFactor, onReflow, left = fals
   return (
     <Box dir="column" align={left ? 'flex-start' : 'flex-end'} justify="flex-start" width="100%" height="auto" minHeight="100%">
       <HeightReporter onReflow={onReflow} />
+
       <Box dir="row" width="100%" height="auto" justify={left ? 'flex-start' : 'flex-end'} margin={0} grow={1} wrap="wrap">
         {shape}
       </Box>
