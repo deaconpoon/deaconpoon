@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-spring/three": "^9.4.5",
     "@react-spring/web": "9.1.1",
     "@react-three/drei": "4.1.8",
     "@react-three/fiber": "6.0.14",
@@ -10,7 +11,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "three": "0.127.0",
+    "three": "^0.127.0",
     "threejs-meshline": "^2.0.12"
   },
   "scripts": {
@@ -35,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "babel-plugin-macros": "^3.1.0",
     "customize-cra": "^1.0.0",
     "customize-cra-react-refresh": "^1.1.0",
     "react-app-rewired": "^2.1.6",

@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect, useRef, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Loader } from '@react-three/drei'
+import { Loader, Preload, Html } from '@react-three/drei'
 
 import Effects from './components/Effects'
 import Content from './pages/Content'
@@ -22,17 +22,23 @@ export default function App() {
         gl={{ powerPreference: 'high-performance', alpha: false, antialias: false, stencil: false, depth: false }}
         onCreated={({ gl }) => gl.setClearColor('#f5f5f5')}>
         <pointLight position={[-10, -10, -10]} intensity={1} />
-        <ambientLight intensity={0.4} />
+        <ambientLight intensity={0.4} color="#FFFDF6" />
         <spotLight
           castShadow
-          angle={0.3}
+          angle={0.4}
           penumbra={1}
           position={[0, 10, 20]}
-          intensity={5}
+          intensity={4}
           shadow-mapSize-width={1024}
           shadow-mapSize-height={1024}
         />
-        <Suspense fallback={null}>
+        <Suspense
+          fallback={
+            <Html>
+              <div />
+            </Html>
+          }>
+          <Preload all />
           <Content onReflow={setPages} />
         </Suspense>
         <Effects />

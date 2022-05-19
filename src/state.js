@@ -1,6 +1,5 @@
 import Geo from './components/Geo'
 import Sphere from './components/Sphere'
-import Logo from './components/Logo'
 
 const state = {
   top: 0,
@@ -12,7 +11,7 @@ const state = {
       tag: 'welcome',
       text: `Human`,
     },
-    { tag: 'my name is', text: `Deacon\nPoon`, shape: <Geo scale={8} position={[10, -8, -5]} /> },
+    { tag: 'my name is', text: `Deacon\nPoon`, shape: <Geo scale={10} position={[10, -16, -8]} /> },
     { tag: 'i am a', text: `Design\nEngineer`, shape: <Sphere /> },
   ],
   depthbox: [
@@ -20,13 +19,13 @@ const state = {
       depth: 0,
       color: '#cccccc',
       textColor: '#ffffff',
-      text: 'In a sauce,\nno one could say\nwhy a thing\nonce set in motion\nshould stop anywhere.',
+      text: 'Passionate about how\ndesign come to life\nand\nto create accessible\nproducts for all.',
       image: '/images/void.jpg',
     },
     {
       depth: -5,
       textColor: '#272727',
-      text: 'Do you like me?',
+      text: `Let's synchronize?`,
       image: '/images/void.jpg',
     },
   ],

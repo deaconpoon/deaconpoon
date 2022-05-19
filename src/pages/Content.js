@@ -1,11 +1,11 @@
 import * as THREE from 'three'
-import { useRef, useCallback, useState, useEffect } from 'react'
+import { useRef, useCallback } from 'react'
 import { useThree, useFrame, useLoader } from '@react-three/fiber'
 import { Flex, Box } from '@react-three/flex'
 import { Line, useAspect } from '@react-three/drei'
+
 import state from '../state'
 import Text from '../components/Text'
-import Geo from '../components/Geo'
 import Page from '../pages/Page'
 import Layercard from '../pages/Layercard'
 import FinalPage from '../pages/FinalPage'
@@ -56,6 +56,7 @@ export default function Content({ onReflow }) {
               position-z={0.5}
               anchorX="center"
               anchorY="middle"
+              textAlign="center"
               fontSize={1.5 * scale}
               lineHeight={1}
               letterSpacing={-0.05}
@@ -68,8 +69,8 @@ export default function Content({ onReflow }) {
         <Box dir="row" width="100%" height="100%" align="center" justify="center">
           <Box>
             <Layercard {...state.depthbox[0]} text={state.depthbox[1].text} boxWidth={bW} boxHeight={bH} map={texture} textScaleFactor={scale} />
-            {/* <Geo position={[bW / 2, -bH / 2, state.depthbox[1].depth]} /> */}
-            <FinalPage planeArgs={[bW, bH]} position={[bW / 2, -bH / 2, state.depthbox[1].depth]} />
+
+            <FinalPage viewport={viewport} planeArgs={[bW, bH]} position={[bW / 2, -bH / 2, state.depthbox[1].depth]} />
           </Box>
         </Box>
       </Flex>
