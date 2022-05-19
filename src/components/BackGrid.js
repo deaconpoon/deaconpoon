@@ -1,6 +1,4 @@
 import * as THREE from 'three'
-import { useEffect } from 'react'
-import { useThree } from '@react-three/fiber'
 import { Plane, MeshDistortMaterial } from '@react-three/drei'
 
 export default function BackGrid() {
